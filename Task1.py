@@ -19,7 +19,7 @@ def total_salary(path):
             average = total // count_developer
             return total, average
     except FileNotFoundError:
-        print("FileNotFound")
+        print("File not found")
         return None, None
     except Exception as e:
         print("Error: {e}")
