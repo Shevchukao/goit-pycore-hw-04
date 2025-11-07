@@ -9,14 +9,14 @@ def total_salary(path):
                     print(f"Not correct count of elements: {elem}")
                     continue
                 try:
-                    total += int(elements[1])
+                    total += float(elements[1])
                     count_developer += 1
                 except ValueError:
                     print(f"Not correct format salary: {elements[1]}")
                     continue
                 if count_developer == 0:
                     return None, None
-            average = total // count_developer
+            average = total / count_developer
             return total, average
     except FileNotFoundError:
         print("File not found")
